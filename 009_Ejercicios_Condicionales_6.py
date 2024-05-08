@@ -7,7 +7,16 @@
 # Adulto: De 20 a 64 años.
 # Adulto mayor: 65 años o más.
 
-edad = int(input("Introduce tu edad: "))
+def edadometro():
+    try:
+        return int(input("Introduce tu edad: "))
+    except:
+        print('esa no es una edad edable! XD edadifiquemos de nuevo jajajaj')
+        return edadometro()
+
+edad = edadometro()
+if edad <= 0:
+    print('no eres ni un feto XD')
 if edad < 13:
     print("Eres un niño.")
 else:
